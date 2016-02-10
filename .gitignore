@@ -26,3 +26,11 @@
 *.exe
 *.out
 *.app
+
+# Data files
+*.txt
+*.mat
+*.zip
+
+# Temp files
+*.asv
