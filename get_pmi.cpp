@@ -43,10 +43,10 @@ int main(int argc, char *argv[]) {
 		while (iss >> token) {
 			tokens.push_back(token);
 		}
-		for (int i = (window - 1) / 2; i < tokens.size(); i++) {
+		for (int i = window; i < tokens.size(); i++) {
 			if (topKfreq.find(tokens[i]) == topKfreq.end())
 				continue;
-			for (int j = i - (window - 1) / 2; j < i; j++) {
+			for (int j = i - window; j < i; j++) {
 				if (topKfreq.find(tokens[j]) == topKfreq.end())
 					continue;
 				int k1 = min(tokens[i], tokens[j]);
