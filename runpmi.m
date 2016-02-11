@@ -23,4 +23,4 @@ pmi = pmi.*(~eye(5000));
 
 outputbuff(:,1) = wordlist(:,1);
 outputbuff(:,2:101) = U(:,1:100);
-dlmwrite('vector.txt',outputbuff);
+dlmwrite('vectors.txt',outputbuff,' ');
