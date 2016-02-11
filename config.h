@@ -13,3 +13,5 @@ const string totfreq_filename = base_filename + ".totfreq.txt";
 const string topKfreq_filename = base_filename + ".topKfreq.txt";
 const string cooccur_filename = base_filename + ".cooccur.txt";
 const string pmi_filename = base_filename + ".pmi.txt";
+
+const string dict_filename = "dict.txt";
