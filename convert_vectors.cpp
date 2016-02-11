@@ -32,6 +32,7 @@ int main(int argc, char *argv[]) {
 	vectorsfout << words << ' ' << size << endl;
 	while (vectorsfin >> id) {
 		getline(vectorsfin, buff);
+		if (dict[id] == "") dict[id] = "[NOWORD]";
 		vectorsfout << dict[id] << buff << endl;
 	}
 }
