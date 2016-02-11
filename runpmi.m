@@ -21,6 +21,8 @@ pmi = pmi.*(~eye(5000));
 [A_hat,E_hat,iter]=inexact_alm_rpca(pmi,0.05,1e-5,1000);
 [U S V]=svd(A_hat);
 
+fprintf(fopen('vectors_rpca_id.txt', 'w'),'5000 100\n');
 outputbuff(:,1) = wordlist(:,1);
 outputbuff(:,2:101) = U(:,1:100);
-dlmwrite('vectors_rpca_id.txt',outputbuff,' ');
+dlmwrite('vectors_rpca_id.txt',outputbuff,'-append',...
+'delimiter',' ');
