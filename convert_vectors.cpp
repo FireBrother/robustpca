@@ -12,14 +12,12 @@ map<int, string> dict;
 
 int main(int argc, char *argv[]) {
 	if (argc != 3) {
-		printf("Please pass words and size as arguments!\n");
+		printf("Please pass filenames as arguments!\n");
 		return 0;
 	}
-	int words = strtol(argv[1], NULL, 10);
-	int size = strtol(argv[2], NULL, 10);
 	ifstream dictfin(dict_filename);
-	ifstream vectorsfin("vectors.txt");
-	ofstream vectorsfout("vectors_rpca.txt");
+	ifstream vectorsfin(argv[1]);
+	ofstream vectorsfout(argv[2]);
 
 	int id;
 	string buff;
@@ -29,6 +27,8 @@ int main(int argc, char *argv[]) {
 		iss >> dict[id];
 	}
 
+	int words, size;
+	vectorsfin >> words >> size;
 	vectorsfout << words << ' ' << size << endl;
 	while (vectorsfin >> id) {
 		getline(vectorsfin, buff);
