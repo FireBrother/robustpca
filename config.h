@@ -15,3 +15,4 @@ const string cooccur_filename = base_filename + ".cooccur.txt";
 const string pmi_filename = base_filename + ".pmi.txt";
 
 const string dict_filename = "dict.txt";
+const string ehat_filename = "e_hat_sparse.txt";
